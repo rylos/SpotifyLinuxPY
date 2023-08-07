@@ -4,8 +4,8 @@
 
 For run the script:
  ```
- git clone 
- cd 
+ git clone https://github.com/sayoridev/SpotifyLinuxPY
+ cd SpotifyLinuxPY
  python3 -B
  ```
 
