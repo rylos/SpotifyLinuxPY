@@ -10,4 +10,13 @@ For run the script:
  ```
 
  Features that I have implemented so far:
- - [ ] Base Code
+ - [ ] Initial Code
+ - [ ] Italy o other leanguage
+ - [ ] Log for choise and error
+ - [ ] Update in the script
+ - [ ] a GUI (possibile in a feature)
+for another idea write in the issues!
+
+  ʕ•ᴥ•ʔ
+ (         )
+ /|____|\ 
