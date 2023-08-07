@@ -6,7 +6,7 @@ For run the script:
  ```
  git clone https://github.com/sayoridev/SpotifyLinuxPY
  cd SpotifyLinuxPY
- python3 -B
+ python3 SpotifyLinux.py -B
  ```
 
  Features that I have implemented so far:
