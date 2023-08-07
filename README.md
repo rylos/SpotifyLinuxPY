@@ -15,8 +15,11 @@ For run the script:
  - [ ] Log for choise and error
  - [ ] Update in the script
  - [ ] a GUI (possibile in a feature)
+
 for another idea write in the issues!
 
+```
   ʕ•ᴥ•ʔ
  (         )
  /|____|\ 
+ ```
