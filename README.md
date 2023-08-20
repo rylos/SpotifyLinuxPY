@@ -11,8 +11,10 @@ For run the script:
 
  Features that I have implemented so far:
  - [ ] Initial Code
- - [ ] Italy o other leanguage
- - [ ] Log for choise and error
+ - [ ] Italy
+ - [ ] English
+-  [ ] other leanguage
+ - [ ] Log file 
  - [ ] Update in the script
  - [ ] a GUI (possibile in a feature)
  - [ ] support for macOS and ChromeOS
