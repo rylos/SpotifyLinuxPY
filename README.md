@@ -26,3 +26,7 @@ for another idea write in the issues!
  (         )
  /|____|\ 
  ```
+
+!!!!IMPORTANT CHANGE!!!!
+i add Wifi check for install package
+and i reduct sh file to minimal for this new script
