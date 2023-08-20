@@ -19,20 +19,18 @@ def check_internet_connection():
 
 print("I procede to check if wifi work")
 
-time.sleep(0.5)
+time.sleep(1.5)
 os.system('clear')
 
 if not check_internet_connection():
+    time.sleep(1.0)
+    os.system('clear')
     print("Wi-Fi is turned off. Please turn it on and relaunch the script.")
     exit()
-
-if check_internet_connection():
-    print("Wifi is work, I proceed to choose the distro")
 else:
-    time.sleep(0.5)
+    print("Wifi is on, Proceed to choose the distribution or os.")
+    time.sleep(1.5)
     os.system('clear')
-    print("Connect to Wi-Fi and relaunch the script")
-    os.system('exit')
 
 print("What distro are you using?")
 print(distro_list[0])
