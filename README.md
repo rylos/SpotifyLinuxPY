@@ -10,7 +10,7 @@ For run the script:
  ```
 
  Features that I have implemented so far:
- - [ ] Initial Code
+ - [x] Initial Code
  - [ ] Italy
  - [ ] English
 -  [ ] other leanguage
