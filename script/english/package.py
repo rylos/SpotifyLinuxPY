@@ -1,4 +1,4 @@
-#import 
+#IMPORT 
 import os
 import time
 import subprocess
@@ -8,7 +8,11 @@ distro_list = ["1. Ubuntu", "2. Fedora", "3. Arch", "4- Void Linux", "5. Gentoo"
 os_list = ["C. ChromeOS", "m. macOS"]
 spotify_package = ["flatpak", "zip", "unzip", "git", "curl"]
 
-#check if wifi is connected
+path_script = os.path.join('patch', 'ubuntu.sh')
+
+ubuntu = os.path.join(os.getcwd(), path_script)
+
+#CHECK WIFI 
 def is_wifi_enabled():
     try:
         result = subprocess.run(['ping', '-c', '1', '8.8.8.8'], capture_output=True, text=True)
@@ -24,11 +28,11 @@ def run_flatpak_command(command):
     else:
         return result.stderr
 
-#define flatpak package
+#DEFINI FLATPAK PACKAGE
 flatpak_repo = ["flatpak", "remote-add", "--if-not-exist", "flathub", "https://flathub.org/repo/flathub.flatpakrepo"]
 flatpak_install = ["flatpak", "install", "flathub", "com.spotify.Client"] 
 
-#wifi
+#WIFI
 print("I procede to check if wifi work")
 
 time.sleep(1.5)
@@ -44,7 +48,7 @@ else:
     print('Connect to Wifi and relaunch the script')
     exit()
 
-#install package
+#INSTALL PACKAGE
 print("What distro are you using?")
 print(distro_list[0])
 print(distro_list[1])
@@ -64,10 +68,19 @@ if scelta == "1":
     for program in spotify_package:
         subprocess.call(["sudo", "apt-get", "install", program])
     os.system('clear')
-    print("Procede to install spotify")
+    print("Procede to install Spotify")
     repo = run_flatpak_command(flatpak_repo)
     install = run_flatpak_command(flatpak_install)
     os.system('clear')
     print("Procede to patch Spotify")
     time.sleep(1.5)
-    
+    os.system('clear')
+    with open(ubuntu, "r") as file:
+        script_code = file.read()
+    exec(script_code)
+elif scelta == "2":
+    os.system('clear')
+    for program in spotify_package:
+        subprocess.call(['sudo', 'dnf', 'install', program])
+    os.system('clear')
+    print("Procede to install Spotify")
