@@ -28,5 +28,4 @@ for another idea write in the issues!
  ```
 
 !!!!IMPORTANT CHANGE!!!!
-i add Wifi check for install package
-and i reduct sh file to minimal for this new script
+i add Wifi check for install package, and i reduct sh file to minimal for this new script
