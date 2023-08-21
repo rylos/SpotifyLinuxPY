@@ -12,12 +12,12 @@ For run the script:
  Features that I have implemented so far:
  - [x] Initial Code
  - [ ] Italy
- - [ ] English
+ - [x] English
 -  [ ] other leanguage
  - [ ] Log file 
  - [ ] Update in the script
  - [ ] a GUI (possibile in a feature)
- - [ ] support for macOS and ChromeOS
+ - [x] support for macOS and ChromeOS
 
 for another idea write in the issues!
 
@@ -28,4 +28,5 @@ for another idea write in the issues!
  ```
 
 !!!!IMPORTANT CHANGE!!!!
-i add Wifi check for install package, and i reduct sh file to minimal for this new script
+
+i add Wifi check for install package, and i reduct sh file to minimal for this new script, now i work for implement log file
