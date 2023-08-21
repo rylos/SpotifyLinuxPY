@@ -2,15 +2,21 @@
 import os
 import time
 import subprocess
+import sqlite3
 
 #START SCRIPT
 distro_list = ["1. Ubuntu", "2. Fedora", "3. Arch", "4- Void Linux", "5. Gentoo", "6. OpenSUSE", "7. CentOS"]
 os_list = ["C. ChromeOS", "m. macOS"]
 spotify_package = ["flatpak", "zip", "unzip", "git", "curl"]
+void_package = ["flatpak", "zip", "unzip", "git", "curl", "xdg-desktop-portal-gtk", "xdg-desktop-portal"]
+gentoo_package = ["net-misc/curl", "app-arch/zip", "app-arch/unzip", "dev-vcs/git"]
+flatpak_package = "com.spotify.Client"
+flatpak_remote = "flathub"
+macos_patch_install = 'script/english/macosinstall.sh'
 
-path_script = os.path.join('patch', 'ubuntu.sh')
-
-ubuntu = os.path.join(os.getcwd(), path_script)
+#PATCH SCRIPT
+ubuntu_script = os.path.join('script', 'patch', 'ubuntu.sh')
+otherpathscript = os.path.join('script', 'patch', 'otherdistro.sh')
 
 #CHECK WIFI 
 def is_wifi_enabled():
@@ -21,16 +27,13 @@ def is_wifi_enabled():
         print("Error", e)
         return False
 
-def run_flatpak_command(command):
-    result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    if result.returncode == 0:
-        return result.stdout
-    else:
-        return result.stderr
-
 #DEFINI FLATPAK PACKAGE
-flatpak_repo = ["flatpak", "remote-add", "--if-not-exist", "flathub", "https://flathub.org/repo/flathub.flatpakrepo"]
-flatpak_install = ["flatpak", "install", "flathub", "com.spotify.Client"] 
+
+def run_flatpak_command(command):
+    # Implementation of the function
+    pass
+
+install_command = ["flatpak", "install", flatpak_remote, flatpak_package]
 
 #WIFI
 print("I procede to check if wifi work")
@@ -69,18 +72,112 @@ if scelta == "1":
         subprocess.call(["sudo", "apt-get", "install", program])
     os.system('clear')
     print("Procede to install Spotify")
-    repo = run_flatpak_command(flatpak_repo)
-    install = run_flatpak_command(flatpak_install)
+    subprocess.run(install_command, check=True)
+    print(f"{flatpak_package} install successfully.")
+    time.sleep(1.5)
     os.system('clear')
     print("Procede to patch Spotify")
     time.sleep(1.5)
     os.system('clear')
-    with open(ubuntu, "r") as file:
-        script_code = file.read()
-    exec(script_code)
+    subprocess.run(['bash', ubuntu_script])
 elif scelta == "2":
     os.system('clear')
     for program in spotify_package:
-        subprocess.call(['sudo', 'dnf', 'install', program])
+        subprocess.call(["sudo", "dnf", "install", "-y", program])
     os.system('clear')
     print("Procede to install Spotify")
+    subprocess.run(install_command, check=True)
+    print(f"{flatpak_package} install successfully.")
+    time.sleep(1.5)
+    os.system('clear')
+    print("Procede to patch Spotify")
+    time.sleep(1.5)
+    os.system('clear')
+    subprocess.run(['bash', otherpathscript])
+elif scelta == 3:
+    os.system('clear')
+    for program in spotify_package:
+        subprocess.call(["sudo", "pacman", "-Sy", "--noconfirm", program])
+    os.system('clear')
+    print("Procede to install Spotify")
+    subprocess.run(install_command, check=True)
+    print(f"{flatpak_package} install successfully.")
+    time.sleep(1.5)
+    os.system('clear')
+    print("Procede to patch Spotify")
+    time.sleep(1.5)
+    os.system('clear')
+    subprocess.run(['bash', otherpathscript])
+elif scelta == 4:
+    os.system('clear')
+    for program in void_package:
+        subprocess.call(["sudo", "xbps-install", "-y", program])
+    os.system('clear')
+    print("Procede to install Spotify")
+    subprocess.run(install_command, check=True)
+    print(f"{flatpak_package} install successfully.")
+    time.sleep(1.5)
+    os.system('clear')
+    print("Procede to patch Spotify")
+    time.sleep(1.5)
+    os.system('clear')
+    subprocess.run(['bash', otherpathscript])
+elif scelta == 5:
+    os.system('clear')
+    for program in gentoo_package:
+        subprocess.call(["sudo", "emerge", "--ask=n", program])
+    os.system('clear')
+    print("Procede to install Spotify")
+    subprocess.run(install_command, check=True)
+    print(f"{flatpak_package} install successfully.")
+    time.sleep(1.5)
+    os.system('clear')
+    print("Procede to patch Spotify")
+    time.sleep(1.5)
+    os.system('clear')
+    subprocess.run(['bash', otherpathscript])
+elif scelta == 6:
+    os.system('clear')
+    for program in spotify_package:
+        subprocess.call(["sudo", "zypper", "--non-interactive", "install", program])
+    os.system('clear')
+    print("Procede to install Spotify")
+    subprocess.run(install_command, check=True)
+    print(f"{flatpak_package} install successfully.")
+    time.sleep(1.5)
+    os.system('clear')
+    print("Procede to patch Spotify")
+    time.sleep(1.5)
+    os.system('clear')
+    subprocess.run(['bash', otherpathscript])
+elif scelta == 7:
+    os.system('clear')
+    for program in spotify_package:
+        subprocess.call(["sudo", "yum", "install", "-y", program])
+    os.system('clear')
+    print("Procede to install Spotify")
+    subprocess.run(install_command, check=True)
+    print(f"{flatpak_package} install successfully.")
+    time.sleep(1.5)
+    os.system('clear')
+    print("Procede to patch Spotify")
+    time.sleep(1.5)
+    os.system('clear')
+    subprocess.run(['bash', otherpathscript])
+elif scelta == "m":
+    os.system('clear')
+    subprocess.run(['bash', macos_patch_install], check=True)
+elif scelta == "C":
+    os.system('clear')
+    for program in spotify_package:
+        subprocess.call(["sudo", "apt-get", "install", program])
+    os.system('clear')
+    print("Procede to install Spotify")
+    subprocess.run(install_command, check=True)
+    print(f"{flatpak_package} install successfully.")
+    time.sleep(1.5)
+    os.system('clear')
+    print("Procede to patch Spotify")
+    time.sleep(1.5)
+    os.system('clear')
+    subprocess.run(['bash', ubuntu_script])
