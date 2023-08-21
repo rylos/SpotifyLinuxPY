@@ -8,14 +8,24 @@ print("1. Install")
 print("2. Update")
 print("\nQ. Exit")
 
+import os
+
+install_path = os.path.join('script', 'english', 'package.py')
+update_path = os.path.join('script', 'english', 'update.py')
+
+install = os.path.join(os.getcwd(), install_path)
+update = os.path.join(os.getcwdb(), update_path)
+
 inp=input()
 
 if inp == "1":
-    package_path = 'script/english/package.sh'
-    subprocess.run(['bash', package_path], check=True)
+    with open(install, "r") as file:
+        script_code = file.read()
+    exec(script_code)
 elif inp == "2":
-    update_path = 'script/english/update.sh'
-    subprocess.run(['bash', update_path], check=True)
+    with open(update, "r") as file:
+        script_code = file.read()
+    exec(script_code)
 elif inp == "Q":
     print("Exiting, Goodbye!")
     time.sleep(0.5)
