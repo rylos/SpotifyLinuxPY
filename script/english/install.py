@@ -28,9 +28,9 @@ elif inp == "Q":
     print("Exiting, Goodbye!")
     time.sleep(0.5)
     os.system('clear')
-    os.system('exit')
+    exit()
 else:
     print("Is not a valid choice")
     time.sleep(0.5)
     os.system('clear')
-    os.system('exit')
+    exit()
