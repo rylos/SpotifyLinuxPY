@@ -1,14 +1,11 @@
 import os
-import subprocess
 import time
 
-#determino la path degli script python
-relative_path_english = os.path.join('script', 'english', 'install.py')
-relative_path_italy = os.path.join('script', 'italy', 'install.py')
+installen = os.path.join('script', 'english', 'install.py')
+installit = os.path.join('script', 'italy', 'install.py')
 
-#Ottieni la path assoluta per gli script
-english = os.path.join(os.getcwd(), relative_path_english)
-italy = os.path.join(os.getcwd(), relative_path_italy)
+installeng = os.path.join(os.getcwd(), installen)
+installita = os.path.join(os.getcwd(), installit)
 
 print("Script made by @sayoridev")
 
@@ -19,22 +16,23 @@ print(" /|____|\\")
 time.sleep(1.5)
 
 os.system('clear')
-
-print("Quale lingua vuoi che venga utilizzata?")
-print("---------------------------------------")
+print("What language do you want to use?")
+print("---------------------------------")
 print("1. English")
 print("2. Italy")
-print("3. Exit")
+print("3. Quit")
 
-lingua=input()
+risp = input()
 
-if lingua == "1":
-    with open(english, "r") as file:
+if risp == "1":
+    os.system('clear')
+    with open(installeng, "r") as file:
         script_code = file.read()
     exec(script_code)
-elif lingua == "2":
-    with open(italy, "r") as file:
+elif risp == "2":
+    os.system('clear')
+    with open(installita, "r") as file:
         script_code = file.read()
     exec(script_code)
 else:
-    os.system('exit')
+    quit()
