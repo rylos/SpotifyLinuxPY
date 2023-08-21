@@ -2,7 +2,6 @@
 import os
 import time
 import subprocess
-import sqlite3
 
 #START SCRIPT
 distro_list = ["1. Ubuntu", "2. Fedora", "3. Arch", "4- Void Linux", "5. Gentoo", "6. OpenSUSE", "7. CentOS"]
@@ -94,7 +93,7 @@ elif scelta == "2":
     time.sleep(1.5)
     os.system('clear')
     subprocess.run(['bash', otherpathscript])
-elif scelta == 3:
+elif scelta == "3":
     os.system('clear')
     for program in spotify_package:
         subprocess.call(["sudo", "pacman", "-Sy", "--noconfirm", program])
@@ -108,7 +107,7 @@ elif scelta == 3:
     time.sleep(1.5)
     os.system('clear')
     subprocess.run(['bash', otherpathscript])
-elif scelta == 4:
+elif scelta == "4":
     os.system('clear')
     for program in void_package:
         subprocess.call(["sudo", "xbps-install", "-y", program])
@@ -122,7 +121,7 @@ elif scelta == 4:
     time.sleep(1.5)
     os.system('clear')
     subprocess.run(['bash', otherpathscript])
-elif scelta == 5:
+elif scelta == "5":
     os.system('clear')
     for program in gentoo_package:
         subprocess.call(["sudo", "emerge", "--ask=n", program])
@@ -136,7 +135,7 @@ elif scelta == 5:
     time.sleep(1.5)
     os.system('clear')
     subprocess.run(['bash', otherpathscript])
-elif scelta == 6:
+elif scelta == "6":
     os.system('clear')
     for program in spotify_package:
         subprocess.call(["sudo", "zypper", "--non-interactive", "install", program])
@@ -150,7 +149,7 @@ elif scelta == 6:
     time.sleep(1.5)
     os.system('clear')
     subprocess.run(['bash', otherpathscript])
-elif scelta == 7:
+elif scelta == "7":
     os.system('clear')
     for program in spotify_package:
         subprocess.call(["sudo", "yum", "install", "-y", program])
