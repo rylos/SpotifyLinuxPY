@@ -35,6 +35,7 @@ def run_flatpak_command(command):
 install_command = ["flatpak", "install", flatpak_remote, flatpak_package]
 
 #WIFI
+os.system('clear')
 print("I procede to check if wifi work")
 
 time.sleep(1.5)
