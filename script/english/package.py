@@ -13,10 +13,6 @@ flatpak_package = "com.github.KRTirtho.Spotube"
 flatpak_remote = "flathub"
 macos_patch_install = 'script/english/macosinstall.sh'
 
-#PATCH SCRIPT
-ubuntu_script = os.path.join('script', 'patch', 'ubuntu.sh')
-otherpathscript = os.path.join('script', 'patch', 'otherdistro.sh')
-
 #CHECK WIFI 
 def is_wifi_enabled():
     try:
