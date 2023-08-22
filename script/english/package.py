@@ -70,8 +70,6 @@ if scelta == "1":
     print("Procede to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
-    time.sleep(1.5)
-    os.system('clear')
     exit()
 elif scelta == "2":
     os.system('clear')
@@ -81,8 +79,6 @@ elif scelta == "2":
     print("Procede to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
-    time.sleep(1.5)
-    os.system('clear')
     exit()
 elif scelta == "3":
     os.system('clear')
@@ -92,8 +88,6 @@ elif scelta == "3":
     print("Procede to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
-    time.sleep(1.5)
-    os.system('clear')
     exit()
 elif scelta == "4":
     os.system('clear')
@@ -103,8 +97,6 @@ elif scelta == "4":
     print("Procede to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
-    time.sleep(1.5)
-    os.system('clear')
     exit()
 elif scelta == "5":
     os.system('clear')
@@ -114,8 +106,6 @@ elif scelta == "5":
     print("Procede to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
-    time.sleep(1.5)
-    os.system('clear')
     exit()
 elif scelta == "6":
     os.system('clear')
@@ -125,8 +115,6 @@ elif scelta == "6":
     print("Procede to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
-    time.sleep(1.5)
-    os.system('clear')
     exit()
 elif scelta == "7":
     os.system('clear')
@@ -136,8 +124,6 @@ elif scelta == "7":
     print("Procede to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
-    time.sleep(1.5)
-    os.system('clear')
     exit()
 elif scelta == "m":
     os.system('clear')
@@ -150,6 +136,4 @@ elif scelta == "C":
     print("Procede to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
-    time.sleep(1.5)
-    os.system('clear')
     exit()
