@@ -2,7 +2,7 @@
 
  SpotifyLinuxPY is a script that allows simplified installation and patching (using SpotX bash) for various distributions.
 
-For run the script:
+To run the script:
  ```
  git clone https://github.com/sayoridev/SpotifyLinuxPY
  cd SpotifyLinuxPY
@@ -11,15 +11,15 @@ For run the script:
 
  Features that I have implemented so far:
  - [x] Initial Code
- - [x] Italy
+ - [x] Italian
  - [x] English
--  [ ] other leanguage
+-  [ ] other language
  - [ ] Log file 
  - [x] Update in the script
- - [ ] a GUI (possibile in a feature)
+ - [ ] a GUI (possibile feature)
  - [x] support for macOS and ChromeOS
 
-for another idea write in the issues!
+for any other ideas write in the issues!
 
 ```
   ʕ•ᴥ•ʔ
@@ -29,4 +29,4 @@ for another idea write in the issues!
 
 !!!!IMPORTANT CHANGE!!!!
 
-i add Wifi check for install package, and i reduct sh file to minimal for this new script, now i work for implement log file
+i added Wifi check for package installation, and reduced sh file to minimal for this new script, now i'm working on implementing log file
