@@ -15,12 +15,10 @@ echo "Proceed to install Spotify"
 sleep 1.5
 wait
 clear
-curl -O https://download.scdn.co/Spotify.dmg
-hdiutil attach Spotify.dmg
-cp -R /Volumes/Spotify/Spotify.app /Applications/
-hdiutil detach /Volumes/Spotify
+curl -O https://github.com/KRTirtho/spotube/releases/latest/download/Spotube-macos-universal.dmg
+hdiutil attach Spotube-macos-universal.dmg
+cp -R /Volumes/Spotube/Spotube.app /Applications/
+hdiutil detach /Volumes/Spotube
+rm Spotube-macos-universal.dmg
 clear
-echo "I proceed to patch Spotify"
-curl -sSL https://gist.github.com/jetfir3/e8830cf8deba6a4f15eec094d344f7b1/raw/spotx.sh > spotx.sh
-bash spotx.sh -Bcd
-rm spotx.sh
+echo "Spotify has been successfully installed."

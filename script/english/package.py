@@ -9,7 +9,7 @@ os_list = ["C. ChromeOS", "m. macOS"]
 spotify_package = ["flatpak", "zip", "unzip", "git", "curl"]
 void_package = ["flatpak", "zip", "unzip", "git", "curl", "xdg-desktop-portal-gtk", "xdg-desktop-portal"]
 gentoo_package = ["net-misc/curl", "app-arch/zip", "app-arch/unzip", "dev-vcs/git"]
-flatpak_package = "com.spotify.Client"
+flatpak_package = "com.github.KRTirtho.Spotube"
 flatpak_remote = "flathub"
 macos_patch_install = 'script/english/macosinstall.sh'
 
