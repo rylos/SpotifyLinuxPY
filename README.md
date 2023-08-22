@@ -11,11 +11,11 @@ For run the script:
 
  Features that I have implemented so far:
  - [x] Initial Code
- - [ ] Italy
+ - [x] Italy
  - [x] English
 -  [ ] other leanguage
  - [ ] Log file 
- - [ ] Update in the script
+ - [x] Update in the script
  - [ ] a GUI (possibile in a feature)
  - [x] support for macOS and ChromeOS
 
