@@ -32,13 +32,13 @@ install_command = ["flatpak", "install", flatpak_remote, flatpak_package]
 
 #WIFI
 os.system('clear')
-print("I procede to check if wifi work")
+print("Proceeding to check if Wifi/internet connection is working")
 
 time.sleep(1.5)
 os.system('clear')
 
 if is_wifi_enabled():
-    print("Procede to choose the distro or os")
+    print("Procede to choose a distro or an os")
     time.sleep(1.0)
     os.system('clear')
 else:
@@ -67,7 +67,7 @@ if scelta == "1":
     for program in spotify_package:
         subprocess.call(["sudo", "apt-get", "install", program])
     os.system('clear')
-    print("Procede to install Spotify")
+    print("Proceeding to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
     exit()
@@ -76,7 +76,7 @@ elif scelta == "2":
     for program in spotify_package:
         subprocess.call(["sudo", "dnf", "install", "-y", program])
     os.system('clear')
-    print("Procede to install Spotify")
+    print("Proceeding to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
     exit()
@@ -85,7 +85,7 @@ elif scelta == "3":
     for program in spotify_package:
         subprocess.call(["sudo", "pacman", "-Sy", "--noconfirm", program])
     os.system('clear')
-    print("Procede to install Spotify")
+    print("Proceeding to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
     exit()
@@ -94,7 +94,7 @@ elif scelta == "4":
     for program in void_package:
         subprocess.call(["sudo", "xbps-install", "-y", program])
     os.system('clear')
-    print("Procede to install Spotify")
+    print("Proceeding to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
     exit()
@@ -103,7 +103,7 @@ elif scelta == "5":
     for program in gentoo_package:
         subprocess.call(["sudo", "emerge", "--ask=n", program])
     os.system('clear')
-    print("Procede to install Spotify")
+    print("Proceeding to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
     exit()
@@ -112,7 +112,7 @@ elif scelta == "6":
     for program in spotify_package:
         subprocess.call(["sudo", "zypper", "--non-interactive", "install", program])
     os.system('clear')
-    print("Procede to install Spotify")
+    print("Proceeding to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
     exit()
@@ -121,7 +121,7 @@ elif scelta == "7":
     for program in spotify_package:
         subprocess.call(["sudo", "yum", "install", "-y", program])
     os.system('clear')
-    print("Procede to install Spotify")
+    print("Proceeding to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
     exit()
@@ -133,7 +133,7 @@ elif scelta == "C":
     for program in spotify_package:
         subprocess.call(["sudo", "apt-get", "install", program])
     os.system('clear')
-    print("Procede to install Spotify")
+    print("Proceeding to install Spotify")
     subprocess.run(install_command, check=True)
     print(f"{flatpak_package} install successfully.")
     exit()
