@@ -76,10 +76,7 @@ if scelta == "1":
     print(f"{flatpak_package} install successfully.")
     time.sleep(1.5)
     os.system('clear')
-    print("Procede to patch Spotify")
-    time.sleep(1.5)
-    os.system('clear')
-    subprocess.run(['bash', ubuntu_script])
+    exit()
 elif scelta == "2":
     os.system('clear')
     for program in spotify_package:
@@ -90,10 +87,7 @@ elif scelta == "2":
     print(f"{flatpak_package} install successfully.")
     time.sleep(1.5)
     os.system('clear')
-    print("Procede to patch Spotify")
-    time.sleep(1.5)
-    os.system('clear')
-    subprocess.run(['bash', otherpathscript])
+    exit()
 elif scelta == "3":
     os.system('clear')
     for program in spotify_package:
@@ -104,10 +98,7 @@ elif scelta == "3":
     print(f"{flatpak_package} install successfully.")
     time.sleep(1.5)
     os.system('clear')
-    print("Procede to patch Spotify")
-    time.sleep(1.5)
-    os.system('clear')
-    subprocess.run(['bash', otherpathscript])
+    exit()
 elif scelta == "4":
     os.system('clear')
     for program in void_package:
@@ -118,10 +109,7 @@ elif scelta == "4":
     print(f"{flatpak_package} install successfully.")
     time.sleep(1.5)
     os.system('clear')
-    print("Procede to patch Spotify")
-    time.sleep(1.5)
-    os.system('clear')
-    subprocess.run(['bash', otherpathscript])
+    exit()
 elif scelta == "5":
     os.system('clear')
     for program in gentoo_package:
@@ -132,10 +120,7 @@ elif scelta == "5":
     print(f"{flatpak_package} install successfully.")
     time.sleep(1.5)
     os.system('clear')
-    print("Procede to patch Spotify")
-    time.sleep(1.5)
-    os.system('clear')
-    subprocess.run(['bash', otherpathscript])
+    exit()
 elif scelta == "6":
     os.system('clear')
     for program in spotify_package:
@@ -146,10 +131,7 @@ elif scelta == "6":
     print(f"{flatpak_package} install successfully.")
     time.sleep(1.5)
     os.system('clear')
-    print("Procede to patch Spotify")
-    time.sleep(1.5)
-    os.system('clear')
-    subprocess.run(['bash', otherpathscript])
+    exit()
 elif scelta == "7":
     os.system('clear')
     for program in spotify_package:
@@ -160,10 +142,7 @@ elif scelta == "7":
     print(f"{flatpak_package} install successfully.")
     time.sleep(1.5)
     os.system('clear')
-    print("Procede to patch Spotify")
-    time.sleep(1.5)
-    os.system('clear')
-    subprocess.run(['bash', otherpathscript])
+    exit()
 elif scelta == "m":
     os.system('clear')
     subprocess.run(['bash', macos_patch_install], check=True)
@@ -177,7 +156,4 @@ elif scelta == "C":
     print(f"{flatpak_package} install successfully.")
     time.sleep(1.5)
     os.system('clear')
-    print("Procede to patch Spotify")
-    time.sleep(1.5)
-    os.system('clear')
-    subprocess.run(['bash', ubuntu_script])
+    exit()
