@@ -1,1 +1,0 @@
-curl -sSL https://gist.github.com/jetfir3/e8830cf8deba6a4f15eec094d344f7b1/raw/spotx.sh | bash -s -- -cd
