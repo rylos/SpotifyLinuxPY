@@ -1,6 +1,6 @@
 import subprocess
 
-spotify_update_package = "com.spotify.Client"
+spotify_update_package = "com.github.KRTirtho.Spotube"
 
 update_command = ["flatpak", "update", spotify_update_package]
 result = subprocess.run(update_command, capture_output=True, text=True)
